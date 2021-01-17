@@ -17,7 +17,7 @@ class GUI:
         print('DATA BASE ATUALIZADO')
 
     @staticmethod
-    def fetch(self, name_champ: str):
+    def fetch(name_champ: str):
         from fetch import Analize
         fetch = Analize('champions')
         champ = fetch.choose_champ(name_champ)[0]
