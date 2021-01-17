@@ -64,7 +64,7 @@ class GUI:
                     while True:
                         try:
                             print(self.linha)
-                            op = input('NOME DO CAMPEÃO: ')
+                            op = input('NOME DO CAMPEÃO\033[1;31m[3 para sair]\033[m: ')
                             self.fetch(op)
                         except IndexError:
                             if op.lower() in ['sair', 'exit', '3']:
