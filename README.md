@@ -1,7 +1,7 @@
 # lolrunas
-===
 Um ***webcrawler*** que pega informações sobre os campeões do site [*op.gg*](https://br.op.gg)
-***
+---
+
 
 ### COMO EXECUTAR:
 - [x] Clone o reposiório
