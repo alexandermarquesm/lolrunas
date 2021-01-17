@@ -1,6 +1,4 @@
 import scrapy
-from scrapy.crawler import CrawlerProcess
-import ipdb
 import json
 
 
@@ -34,8 +32,3 @@ class MainSpider(scrapy.Spider):
             self.list_completed = sorted(self.list_completed, key=lambda k: k['name'])
             f.write(json.dumps(self.list_completed))
             f.close()
-
-
-process = CrawlerProcess()
-process.crawl(MainSpider)
-process.start()
