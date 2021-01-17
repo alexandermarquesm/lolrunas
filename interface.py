@@ -16,11 +16,24 @@ class GUI:
         miranha.start()
         print('DATA BASE ATUALIZADO')
 
+    @staticmethod
+    def fetch(self, name_champ: str):
+        from fetch import Analize
+        fetch = Analize('champions')
+        champ = fetch.choose_champ(name_champ)[0]
+        for c in champ.items():
+            print(f'{c[0]:<15}{c[1]}')
+
     def exist_or(self, op: int):
         if self.search_op(op):
             return op
         else:
             print('\033[1;31mDIGITE UMA OPÇÃO VÁLIDA\033[m')
+
+    def search_op(self, value):
+        for v in self.options:
+            if v.get(value):
+                return value
 
     def create_gui(self):
         print(self.linha)
@@ -29,18 +42,6 @@ class GUI:
                 str_option = f'[ {k} ]  {v}'
                 print(str_option)
         print(self.linha)
-
-    def search_op(self, value):
-        for v in self.options:
-            if v.get(value):
-                return value
-
-    def fetch(self, name_champ: str):
-        from fetch import Analize
-        fetch = Analize('champions')
-        champ = fetch.choose_champ(name_champ)[0]
-        for c in champ.items():
-            print(f'{c[0]:<15}{c[1]}')
 
     def main(self):
         while True:
