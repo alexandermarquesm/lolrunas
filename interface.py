@@ -6,7 +6,6 @@ class GUI:
         self.options = options
         self.linha = 50 * '\033[30;40m=\033[m'
 
-
     @staticmethod
     def update_db():
         from spider import MainSpider
